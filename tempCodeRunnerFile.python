@@ -1,0 +1,51 @@
+# # #Loops
+# # # Loops allow us to execute code multiple times
+
+# # #for loops
+# # for i in range(1000):
+# #     print("hello", i)
+
+# # # Make a for loop that prints the iterator + 1, 1000 times
+# # for i in range(1000):
+# #     print(i+1)
+
+# # # Make a for loop that breaks the computer
+# # for i in range(1000000000000000000000000):
+# #     print(i)
+
+# #while loops
+# alive = True
+# i = 0
+
+# while alive:
+#     i+=1
+#     print("alive, age: ", i)
+
+#     if(i==100):
+#         alive = False
+
+#Loop Challenge!
+
+# 1. Create a for loop that counts 5 to 505.
+
+# for i in range(5, 506):
+#     print(i)
+
+# 2. Create a while loop that stops at 1000. Inside the while loop is
+# a for loop that prints 0 - 9.
+
+alive = True
+x = 0
+while alive:
+    for i in range(9):
+        print(i)
+    
+    if x == 1000:
+        alive = False
+
+
+# 3. Create a while loop that uses a variable called "cooking". The cooking variable
+# should equal false after i = -10000. 
+
+# 4. Create a for loop with range 100 with another for loop inside of it with 
+# range 1000.

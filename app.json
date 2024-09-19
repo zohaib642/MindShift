@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "MindShift",
-    "slug": "MindShift",
+    "slug": "mindshift",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "mindshift",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -17,9 +17,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assetAs/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.mindshift"
     },
     "web": {
       "bundler": "metro",
