@@ -4,7 +4,7 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -32,6 +32,24 @@ export default function TabLayout() {
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="podcasts"
+        options={{
+          title: 'Podcasts',
+          tabBarIcon: ({ color, focused }) => (
+            <FontAwesome5 name={focused ? 'microphone-alt' : 'microphone-alt-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="relax"
+        options={{
+          title: 'Relax',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'moon' : 'moon-outline'} color={color} />
           ),
         }}
       />

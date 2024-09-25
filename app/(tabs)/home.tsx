@@ -1,8 +1,10 @@
-import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, Linking } from 'react-native';
 
 export default function HomeScreen() {
+  
   return (
-    <View style={styles.genStyle}>
+    <SafeAreaView style={styles.genStyle}>
+      <Text style={styles.title}>Home</Text>
       <TouchableOpacity style={[styles.button, {left: 60, top: 120}]}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Text style={[styles.text, {left: 45}]}>Schedule</Text>
@@ -21,13 +23,14 @@ export default function HomeScreen() {
           <Image style={{height: 90, width: 90, right: 25, bottom: 13}} source={require('@/assets/images/podcast.png')} resizeMode='contain'/>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.button, {left: 320, top: -125}]}>
+      <TouchableOpacity style={[styles.button, {left: 320, top: -125}]} onPress={() => {Linking.openURL("https://www.google.com/");}}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Text style={[styles.text, {left: 45}]}>Relax</Text>
           <Image style={{height: 90, width: 90, right: 17, bottom: 13}} source={require('@/assets/images/meditation.png')} resizeMode='contain'/>
+          
         </View>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -45,11 +48,20 @@ const styles = StyleSheet.create({
     width: 175
   },
   genStyle: {
-    backgroundColor: '#000000'
+    backgroundColor: '#000000',
+    width: "100%",
+    height: "100%"
   },
   text: {
     color: '#FFFFFF',
     top: 55,
     fontFamily: 'Palatino'
+  },
+  title: {
+    color: '#FFFFFF',
+    top: 55,
+    fontFamily: 'Palatino',
+    fontSize: 70,
+    textAlign: 'center'
   }
 });
